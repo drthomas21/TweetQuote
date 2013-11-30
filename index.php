@@ -16,7 +16,7 @@ if($Instance->hasStoredOAuthToken()) {
 
 if($_SERVER['REQUEST_URI'] != "/" && !preg_match("/\/\?tweet/", $_SERVER['REQUEST_URI'])) {
 	$request = strtolower($_SERVER['REQUEST_URI']);
-	$action = preg_replace("/[^a-z]/", "", $request);
+	$action = preg_replace("/[^a-z\-]/", "", $request);
 	if(file_exists(dirname(__FILE__)."/view/{$action}.inc")) {
 		$file = (dirname(__FILE__)."/view/{$action}.inc");
 	} else {
