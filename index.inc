@@ -1,5 +1,7 @@
 <html>
 	<head>
+		<title>Self-Tweets: TweetQuote</title>
+		<meta name="keywords" content="TweetQuote, Self Tweets, Twitter, Tweets, Github Project" />
 	</head>
 	<body>
 		<h1>Self-Tweets: TweetQuote</h1>

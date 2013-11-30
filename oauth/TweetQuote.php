@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 1.0
+ * @version 1.1
  * @author drthomas
  *
  */
@@ -34,9 +34,9 @@ class TweetQuote {
 	
 	private function storeToken($token) {
 		$storedTokens = $this->getToken();
-		if($storedToken && array_key_exists($token['screen_name'],$storedTokens)){
-			$storedToken[$token['screen_name']]['oauth_token'] = $token['oauth_token'];
-			$storedToken[$token['screen_name']]['oauth_token_secret'] = $token['oauth_token_secret'];
+		if($storedTokens && array_key_exists($token['screen_name'],$storedTokens)){
+			$storedTokens[$token['screen_name']]['oauth_token'] = $token['oauth_token'];
+			$storedTokens[$token['screen_name']]['oauth_token_secret'] = $token['oauth_token_secret'];
 			$content = "";
 			foreach($storedTokens as $screenName => $token){
 				$content .= "[{$screenName}]\r\noauth_token = {$token['oauth_token']}\r\noauth_token_secret = {$token['oauth_token_secret']}\r\n";
