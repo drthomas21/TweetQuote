@@ -2,7 +2,6 @@
 	<h2>Self-Tweets: TweetQuote</h2>
 	<p>PHP library for sending tweets to a specific or multiple accounts. <br />
 	View the project on <a href="https://github.com/drthomas21/TweetQuote">GitHub</a>. Also, visit the <a href="http://self-tweets.truekip.com/">Example Page</a>.</p>
-	
 	<h2>Flow Overview For Normal Automation</h2>
 	<ol>
 		<li>Retreive stored client credentials and token credentials.</li>
@@ -11,7 +10,6 @@
 		<li>Tweet the message onto clients' profiles.</li>
 		<li>Log successful and failed tweets.</li>
 	</ol>
-	
 	<h2>Notes</h2>
 	<p>1) The Tweet Quote library requires a Twitter Developer account and needs a consumer key, consumer secret and permission level of "Read, write, and direct messages".</p>
 	<p>2) Clients that did not give the app authorization to be used, should go to <strong>signup.php</strong> and allow the app access to their accounts. Once the user gives the app permission 
