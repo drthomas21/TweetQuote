@@ -1,9 +1,23 @@
 <div class="col-xs-12">
 	<h1>TweetQuote</h1>
 </div>
+<?php 
+if(isset($arrTweets)){
+	foreach ($arrTweets as $Tweet) {
+		if(isset($Tweet->errors) && count($Tweet->errors) > 0) {
+			$message = array();
+			foreach($Tweet->errors as $Error) {
+				$message[] = "Error Code {$Error->code}: {$Error->message}";
+			}
+			echo "<div class='alert alert-danger'>".implode(". ",$message)."</div>";
+		} else {
+			echo "<div class='alert alert-success'>Successfully Posted Message on {$Tweet->user->screen_name}'s account</div>";
+		}
+	}	
+} ?>
 <div class="col-xs-12">
 	<p>
-		View the <a href="readme.html">ReadMe Page</a> to read more details
+		View the <a href="readme">ReadMe Page</a> to read more details
 		about this project
 	</p>
 	<p>

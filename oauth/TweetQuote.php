@@ -183,11 +183,13 @@ class TweetQuote {
 				$arrTweetStatus[] = $TwitterConnection->post('statuses/update', array('status' => $message));
 			}
 		}
-		
+
 		if(defined('DEBUG') && DEBUG == true) {
 			echo "<strong>Tweet Statuses</strong>: ";
 			var_dump($arrTweetStatus);
 			echo "<br />";
 		}
+		
+		return $arrTweetStatus;
 	}
 }

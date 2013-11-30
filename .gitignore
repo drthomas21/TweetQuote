@@ -3,3 +3,4 @@ error_log
 .buildpath
 .project
 .settings
+config.php

@@ -1,18 +1,20 @@
 <?php
+require_once('config.php');
 require_once('oauth/TweetQuote.php');
 
-/*$Instance = new TweetQuote();
+$Instance = new TweetQuote($consumerKey,$consumerSecret);
 if($Instance->hasStoredOAuthToken()) {
 	$Instance->buildTwitterConnection();
 	if($_GET['tweet']) {
-		$Instance->sendTweet($_GET['tweet']);
+		$arrTweets = $Instance->sendTweet($_GET['tweet']);
 	}
 } else {
 	$redirectUrl = $Instance->authorizeApp(true);
-}*/
+	return;
+}
 
 
-if($_SERVER['REQUEST_URI'] != "/") {
+if($_SERVER['REQUEST_URI'] != "/" && !preg_match("/\/\?tweet/", $_SERVER['REQUEST_URI'])) {
 	$request = strtolower($_SERVER['REQUEST_URI']);
 	$action = preg_replace("/[^a-z]/", "", $request);
 	if(file_exists(dirname(__FILE__)."/view/{$action}.inc")) {
