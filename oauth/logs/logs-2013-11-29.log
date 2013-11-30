@@ -1,0 +1,66 @@
+[18:05:09]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg/r/n[18:05:09]Requesting token with callback url: http://self-tweets.truekip.com/callback.php/r/n[18:05:09]Getting Twitter's authorization url/r/n[18:06:14]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg/r/n[18:06:14]Requesting token with callback url: http://self-tweets.truekip.com/callback.php/r/n[18:06:14]Getting Twitter's authorization url/r/n[18:06:27]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg/r/n[18:06:27]Requesting token with callback url: http://self-tweets.truekip.com/callback.php/r/n[18:06:28]Getting Twitter's authorization url/r/n[18:07:13]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:07:13]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:07:13]Getting Twitter's authorization url
+[18:09:54]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:09:54]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:09:54]Getting Twitter's authorization url
+[18:10:37]The OAuth Token is not set.
+[18:10:37]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:10:37]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:10:37]Getting Twitter's authorization url
+[18:11:07]The OAuth Token is not set.
+[18:11:08]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:11:08]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:11:08]Getting Twitter's authorization url
+[18:11:15]The OAuth Token is not set.
+[18:12:16]The OAuth Token is not set.
+[18:13:02]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:13:02]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:13:02]Getting Twitter's authorization url
+[18:13:07]The OAuth Token is not set.
+[18:13:55]The OAuth Token is not set.
+[18:14:39]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:14:39]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:14:39]Getting Twitter's authorization url
+[18:21:05]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:21:05]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:21:06]Getting Twitter's authorization url
+[18:26:41]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:26:41]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:26:41]Getting Twitter's authorization url
+[18:34:49]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:34:49]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:34:49]Getting Twitter's authorization url
+[18:34:49]Redirecting url to Twitter's aurhorization url: https://api.twitter.com/oauth/authenticate?oauth_token=SLeqrgYC0VW4iaCOCWLy2NGJaWYWSTsxIuYWIMQR2is
+[18:35:17]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:35:17]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:35:17]Getting Twitter's authorization url
+[18:35:17]Redirecting url to Twitter's aurhorization url: https://api.twitter.com/oauth/authenticate?oauth_token=wmxbeemZZumslhhYQXCWkmb8KLb0nhCIeheq0jq7o
+[18:37:16]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:37:16]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:37:16]Getting Twitter's authorization url
+[18:37:16]Redirecting url to Twitter's aurhorization url: https://api.twitter.com/oauth/authenticate?oauth_token=9InwTr731nVBQM2Lx24RoEvWj15xeXXg6cMz7TYDbY
+[18:38:05]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:38:05]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:38:05]Getting Twitter's authorization url
+[18:38:05]Redirecting url to Twitter's aurhorization url: https://api.twitter.com/oauth/authenticate?oauth_token=DPttBqGz37vzsu6SyvPsvOvppCJ7lfD8wgY023x4Pc
+[18:42:27]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:42:27]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:42:27]Getting Twitter's authorization url
+[18:42:27]Redirecting url to Twitter's aurhorization url: https://api.twitter.com/oauth/authenticate?oauth_token=wiJFFgwd5ZXQFA1a5lUWzeo6hzawwmghMZdqFrfr1I
+[18:43:04]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:43:04]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:43:04]Getting Twitter's authorization url
+[18:43:04]Redirecting url to Twitter's aurhorization url: https://api.twitter.com/oauth/authenticate?oauth_token=sIZQrDjikkuV4WfJAgfljuro1TV6JlPOssvMpfTRgoc
+[18:43:16]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[18:43:16]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[18:43:16]Getting Twitter's authorization url
+[18:43:16]Redirecting url to Twitter's aurhorization url: https://api.twitter.com/oauth/authenticate?oauth_token=ifdGLX03sX9EIkkyfZms0RzWRV38CPXqk5vusot58
+[19:42:42]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[19:42:42]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[19:42:42]Getting Twitter's authorization url
+[19:42:42]Redirecting url to Twitter's aurhorization url: https://api.twitter.com/oauth/authenticate?oauth_token=jVVURyx4GMTmhueEbijBguaJ2K7rPmIkocmOzwkY
+[19:42:49]Connecting to TwitterOAuth using ConsumerKey: q1MmvKYnuHG6Vs1fxDIUVg
+[19:42:49]Requesting token with callback url: http://self-tweets.truekip.com/callback.php
+[19:42:49]Getting Twitter's authorization url
+[19:42:49]Redirecting url to Twitter's aurhorization url: https://api.twitter.com/oauth/authenticate?oauth_token=uDrsZi9bMuB1QCPaJwBVidVLRFB4zwvUT09sf8ibuY0
