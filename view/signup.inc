@@ -1,0 +1,3 @@
+<?php
+	$Instance->authorizeApp(true);
+?>
