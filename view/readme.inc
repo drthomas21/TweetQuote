@@ -1,4 +1,4 @@
-<h2>Self-Tweets: TweetQuote - v1.1</h2>
+<h2>Self-Tweets: TweetQuote - v1.2</h2>
 <p>
 	PHP library for sending tweets to a specific or multiple accounts. <br />
 	View the project on <a href="https://github.com/drthomas21/TweetQuote">GitHub</a>.
