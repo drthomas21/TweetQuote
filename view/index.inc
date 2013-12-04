@@ -2,6 +2,9 @@
 	<h1>TweetQuote</h1>
 </div>
 <?php 
+if(isset($_GET['message'])){
+	echo "<div class='alert alert-success'>".urldecode($_GET['message'])."</div>";
+}
 if(isset($arrTweets)){
 	foreach ($arrTweets as $Tweet) {
 		if(isset($Tweet->errors) && count($Tweet->errors) > 0) {
@@ -21,7 +24,7 @@ if(isset($arrTweets)){
 		about this project
 	</p>
 	<p>
-		If you would like to test this project, <a href="signup.php">Add your
+		If you would like to test this project, <a href="/signup">Add your
 		test Twitter Account Here</a> (and remember, do only your test
 		Twitter Account and not your personal account, any one will be able
 		to tweet to whatever account you have posted)
