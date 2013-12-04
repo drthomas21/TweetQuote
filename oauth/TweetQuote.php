@@ -183,6 +183,19 @@ class TweetQuote {
 				$arrTweetStatus[] = $TwitterConnection->post('statuses/update', array('status' => $message));
 			}
 		}
+		
+		if(!empty($arrTweetStatus)) {
+			foreach($arrTweetStatus as $Tweet) {
+				if(isset($Tweet->errors) && count($Tweet->errors) > 0) {
+                			foreach($Tweet->errors as $Error) {
+                                		MessageLogger::logMessage("Error Code {$Error->code}: {$Error->message}");
+                        		}
+                        		
+                		} else {
+                        		MessageLogger::logMessage("Successfully Posted Message on {$Tweet->user->screen_name}'s account");
+                		}
+			}
+		}
 
 		if(defined('DEBUG') && DEBUG == true) {
 			echo "<strong>Tweet Statuses</strong>: ";
