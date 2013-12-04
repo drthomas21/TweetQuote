@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 1.1
+ * @version 1.2
  * @author drthomas
  *
  */
@@ -25,7 +25,7 @@ class TweetQuote {
 		$this->__consumerSecret = $consumerSecret;
 		
 		if($callbackUrl == null) {
-			$this->__callbackUrl = "http://{$_SERVER['HTTP_HOST']}/callback.php";
+			$this->__callbackUrl = "";
 		} else {
 			$this->__callbackUrl = $callbackUrl;
 		}
@@ -83,7 +83,6 @@ class TweetQuote {
 		$redirectUrl = $connection->getAuthorizeURL($tempCred);
 		if(defined('DEBUG') && DEBUG == true) {
 			echo "<strong>Twitter Authentication URL</strong>: ";
-			var_dump($redirectUrl);
 			echo "<br />";
 		}
 		
@@ -94,8 +93,8 @@ class TweetQuote {
 				MessageLogger::logMessage("Redirecting url to Twitter's aurhorization url: {$redirectUrl}");
 				header("Location: {$redirectUrl}");
 			} else {
-				MessageLogger::logMessage("Failed to authorizing the app's credentials: {$redirectUrl}");
-				header("Location: {$this->__callbackUrl}?message=1");
+				MessageLogger::logMessage("Failed to authorize the app's credentials, please check app settings");
+				header("Location: {$this->__callbackUrl}?message=".urlencode("Failed to authorize the app's credentials, please check app settings"));
 			}
 		}
 
@@ -183,17 +182,15 @@ class TweetQuote {
 				$arrTweetStatus[] = $TwitterConnection->post('statuses/update', array('status' => $message));
 			}
 		}
-		
 		if(!empty($arrTweetStatus)) {
 			foreach($arrTweetStatus as $Tweet) {
 				if(isset($Tweet->errors) && count($Tweet->errors) > 0) {
-                			foreach($Tweet->errors as $Error) {
-                                		MessageLogger::logMessage("Error Code {$Error->code}: {$Error->message}");
-                        		}
-                        		
-                		} else {
-                        		MessageLogger::logMessage("Successfully Posted Message on {$Tweet->user->screen_name}'s account");
-                		}
+					foreach($Tweet->errors as $Error) {
+						MessageLogger::logMessage("Error Code {$Error->code}: {$Error->message}");
+					}                        		
+				} else {
+						MessageLogger::logMessage("Successfully Posted Message on {$Tweet->user->screen_name}'s account");
+				}
 			}
 		}
 
