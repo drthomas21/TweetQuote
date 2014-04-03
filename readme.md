@@ -1,7 +1,7 @@
 <html>
 	<h2>Self-Tweets: TweetQuote - v1.2</h2>
 	<p>PHP library for sending tweets to a specific or multiple accounts. <br />
-	View the project on <a href="https://github.com/drthomas21/TweetQuote">GitHub</a>. Also, visit the <a href="http://self-tweets.truekip.com/">Example Page</a>.</p>
+	View the project on <a href="https://github.com/drthomas21/TweetQuote">GitHub</a>. Also, visit the <strike>Example Page</strike>.</p>
 	<h2>Flow Overview For Normal Automation</h2>
 	<ol>
 		<li>Retreive stored client credentials and token credentials.</li>
