@@ -1,14 +1,14 @@
 <?php
 /**
- * @version 1.2
+ * @version 1.3
  * @author drthomas
  *
  */
 class TweetQuote {
-	private $__consumerKey;
-	private $__consumerSecret;
-	private $__callbackUrl;
-	private $__Twitter;
+	private $__consumerKey = "--Twitter app's API key--";
+	private $__consumerSecret = "--Twitter app's API secret--";
+	private $__callbackUrl = null;
+	private $__Twitter = array();
 	
 	/**
 	 * 
@@ -16,7 +16,7 @@ class TweetQuote {
 	 * @param required string $consumerSecret
 	 * @param string $callbackUrl
 	 */
-	public function __construct($consumerKey, $consumerSecret, $callbackUrl = null) {
+	public function __construct($consumerKey = "", $consumerSecret = "", $callbackUrl = null) {
 		session_start();
 		require_once(dirname(__FILE__)."/twitteroauth.php");
 		require_once(dirname(__FILE__)."/MessageLogger.php");
@@ -32,7 +32,13 @@ class TweetQuote {
 		$this->__Twitter = array();
 	}
 	
+	/**
+	 * 
+	 * @param array $token
+	 * @return boolean
+	 */
 	private function storeToken($token) {
+		$bool = true;
 		$storedTokens = $this->getToken();
 		if($storedTokens && array_key_exists($token['screen_name'],$storedTokens)){
 			$storedTokens[$token['screen_name']]['oauth_token'] = $token['oauth_token'];
@@ -41,11 +47,16 @@ class TweetQuote {
 			foreach($storedTokens as $screenName => $token){
 				$content .= "[{$screenName}]\r\noauth_token = {$token['oauth_token']}\r\noauth_token_secret = {$token['oauth_token_secret']}\r\n";
 			}
-			file_put_contents(dirname(__FILE__)."/conf.ini", $content);
+			
+			$_bool = @file_put_contents(dirname(__FILE__)."/conf.ini", $content);
+			if(!$_bool) {
+				$bool = $_bool;
+			}
 		} else {
 			$content = "[{$token['screen_name']}]\r\noauth_token = {$token['oauth_token']}\r\noauth_token_secret = {$token['oauth_token_secret']}\r\n";
-			file_put_contents(dirname(__FILE__)."/conf.ini", $content,FILE_APPEND);
-		}		
+			$bool = @file_put_contents(dirname(__FILE__)."/conf.ini", $content,FILE_APPEND);
+		}
+		return $bool;		
 	}
 	
 	private function getToken() {
@@ -104,17 +115,18 @@ class TweetQuote {
 	/**
 	 * Use this function to verify that the OAuth token is correct. This function will also store the token.
 	 * @param string $oauthVerifier
+	 * @return bool
 	 */
 	public function authorizeOAuthToken($oauthVerifier = "") {
 		if(!isset($_SESSION['oauth_token']) || empty($_SESSION['oauth_token'])) {
 			MessageLogger::logMessage("The OAuth Token is not set.");
 			var_dump($_SESSION['oauth_token']);
-			return;
+			return false;
 		}
 		
 		if(empty($oauthVerifier)) {
 			MessageLogger::logMessage("The OAuth Verifier is not set.");
-			return;
+			return false;
 		}
 		
 		$connection = new TwitterOAuth($this->__consumerKey, $this->__consumerSecret, $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']);
@@ -124,7 +136,10 @@ class TweetQuote {
 			var_dump($_SESSION['tokenCred']);
 			echo "<br />";
 		}
-		$this->storeToken($_SESSION['tokenCred']);
+		if(!$this->storeToken($_SESSION['tokenCred'])) {
+			MessageLogger::logMessage("Failed to store token");
+			return false;
+		}
 	}
 	
 	/**

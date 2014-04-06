@@ -5,6 +5,9 @@
 if(isset($_GET['message'])){
 	echo "<div class='alert alert-success'>".urldecode($_GET['message'])."</div>";
 }
+if(isset($_GET['error'])){
+	echo "<div class='alert alert-danger'>".urldecode($_GET['error'])."</div>";
+}
 if(isset($arrTweets)){
 	foreach ($arrTweets as $Tweet) {
 		if(isset($Tweet->errors) && count($Tweet->errors) > 0) {
@@ -14,7 +17,7 @@ if(isset($arrTweets)){
 			}
 			echo "<div class='alert alert-danger'>".implode(". ",$message)."</div>";
 		} else {
-			echo "<div class='alert alert-success'>Successfully Posted Message on {$Tweet->user->screen_name}'s account</div>";
+			echo "<div class='alert alert-success'>Successfully Posted Message on <a target='_blank' href='https://twitter.com/{$Tweet->user->screen_name}'>{$Tweet->user->screen_name}'s</a> account</div>";
 		}
 	}	
 } ?>
