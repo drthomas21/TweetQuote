@@ -49,12 +49,15 @@ class TweetQuote {
 			}
 			
 			$_bool = @file_put_contents(dirname(__FILE__)."/conf.ini", $content);
-			if(!$_bool) {
+			if(!$_bool === false) {
 				$bool = $_bool;
 			}
 		} else {
 			$content = "[{$token['screen_name']}]\r\noauth_token = {$token['oauth_token']}\r\noauth_token_secret = {$token['oauth_token_secret']}\r\n";
-			$bool = @file_put_contents(dirname(__FILE__)."/conf.ini", $content,FILE_APPEND);
+			$_bool = @file_put_contents(dirname(__FILE__)."/conf.ini", $content,FILE_APPEND);
+			if($_bool === false) {
+				$bool = $_bool;
+			}
 		}
 		return $bool;		
 	}
