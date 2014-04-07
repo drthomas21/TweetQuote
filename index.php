@@ -5,6 +5,7 @@ require_once('config.php');
 require_once('oauth/TweetQuote.php');
 $Instance = new TweetQuote($consumerKey,$consumerSecret);
 $Instance->setCallbackUrl("http://{$_SERVER['SERVER_NAME']}/callback");
+$action = "";
 
 if($_SERVER['REQUEST_URI'] != "/" && stripos($_SERVER['REQUEST_URI'],"/?tweet") === false && stripos($_SERVER['REQUEST_URI'],"/?message") === false && stripos($_SERVER['REQUEST_URI'],"/?error") === false) {
 	$request = preg_replace("/\?.+/","",strtolower($_SERVER['REQUEST_URI']));
