@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_URI'] != "/" && stripos($_SERVER['REQUEST_URI'],"/?tweet") 
 } else {
 	if($Instance->hasStoredOAuthToken()) {
 		$Instance->buildTwitterConnection();
-		if(isset($_GET['tweet'] && $_GET['tweet']) {
+		if(isset($_GET['tweet']) && $_GET['tweet']) {
 			$arrTweets = $Instance->sendTweet($_GET['tweet']);
 		}
 	} 
