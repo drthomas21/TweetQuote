@@ -143,6 +143,8 @@ class TweetQuote {
 			MessageLogger::logMessage("Failed to store token");
 			return false;
 		}
+		
+		return true;
 	}
 	
 	/**
