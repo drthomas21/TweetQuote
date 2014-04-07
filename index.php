@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Los_Angeles');
+
 require_once('config.php');
 require_once('oauth/TweetQuote.php');
 $Instance = new TweetQuote($consumerKey,$consumerSecret);
@@ -15,7 +17,7 @@ if($_SERVER['REQUEST_URI'] != "/" && stripos($_SERVER['REQUEST_URI'],"/?tweet") 
 } else {
 	if($Instance->hasStoredOAuthToken()) {
 		$Instance->buildTwitterConnection();
-		if($_GET['tweet']) {
+		if(isset($_GET['tweet'] && $_GET['tweet']) {
 			$arrTweets = $Instance->sendTweet($_GET['tweet']);
 		}
 	} 
