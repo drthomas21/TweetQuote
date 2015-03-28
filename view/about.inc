@@ -2,7 +2,7 @@
 <p>
 	PHP library for sending tweets to a specific or multiple accounts. <br />
 	View the project on <a href="https://github.com/drthomas21/TweetQuote">GitHub</a>.
-	Also, visit the <a href="http://self-tweets.truekip.com/">Example Page</a>.
+	Also, visit the <a href="/">Example Page</a>.
 </p>
 <h2>Flow Overview For Normal Automation</h2>
 <ol>
@@ -25,7 +25,7 @@
 	this within your <strong>signup.php</strong>:<br />
 </p>
 <pre>
-	<code>&lt;?php
+<code>&lt;?php
 $Instance = new TweetQuote();
 $Instance-&gt;setCallbackUrl("http:&#47;&#47;yourwebsite.com&#47;somecallbackurl");
 $Instance-&gt;authorizeApp();

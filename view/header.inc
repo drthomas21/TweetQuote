@@ -27,7 +27,7 @@
 					<a href="https://github.com/drthomas21/TweetQuote">Github Project</a>
 				</li>
 				<li <?php if($action == "readme"){echo "class='active'";}?>>
-					<a href="/readme">About Page</a>
+					<a href="/about">About Page</a>
 				</li>
 			</ul>
 		</div>
