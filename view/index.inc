@@ -23,7 +23,7 @@ if(isset($arrTweets)){
 } ?>
 <div class="col-xs-12">
 	<p>
-		View the <a href="readme">ReadMe Page</a> to read more details
+		View the <a href="about">ReadMe Page</a> to read more details
 		about this project
 	</p>
 	<p>
